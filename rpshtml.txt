@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script src="" async defer>
+/*
+Need a computer play function to return a value (Rock, Paper, or sissors)
+            Needs to pick a random string from Rock, Paper, Sissors
+            return the product of that random selection
+Need a Player select function that returns input value from the player
+            Request input from the player
+            Returns the poduct of the user input
+Function that will check the returns from the computer and the player for a single round of the game (arguments should be the player seclection and computer selection)
+            if player picks rock and computer picks sissors 
+                return that the player wins
+            elsif the player picks sissors and the computer picks paper
+                return that the player wins
+            elsif the player picks paper and the computer picks rock
+                return that the player wins
+            else 
+                ruturn that the player looses "You loose, computer selections beats playerslection"
+            Returns the results of the round win or loose. 
+Function that will play multiple rounds of the playround function up to 5 
+            Needs to log how many rounds the computer and the player win
+            
+*/
+
+
+        </script>
+    </body>
+</html>
