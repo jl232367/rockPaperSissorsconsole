@@ -18,6 +18,50 @@
         <![endif]-->
         
         <script src="" async defer>
+
+// Need a computer play function to return a value (Rock, Paper, or sissors)
+           
+
+            
+            let playerSelection = "Rock";
+            let select = ["Rock", "Paper", "Scissors"];
+            let computerSelection = computerPlay();
+            function playRound(playerSelection, computerSelection) {
+                
+                console.log("Wow! You won! " + playerSelection + " beats " + computerSelection);
+                /*computerSelection.toUpperCase();
+                playerSelection.toUpperCase();
+                select.map(a => a.toUpperCase());
+                if(playerSelection == select[0] || playerSelection == select[1] || playerSelection == select[2]) {
+                    if (playerSelection == select[0] && computerSelection == select[2]){
+                        //console.log("Wow! You won! " + playerSelection + " beats " + computerSelection);
+                        console.log("W1");
+                    }
+                    else if (playerSelection == select[1] && computerSelection == select[0]){
+                        //console.log("Wow! You won! " + playerSelection + " beats " + computerSelection);
+                        console.log("W2");
+                    }
+                    else if (playerSelection == select[2] && computerSelection == select[1]){
+                        //console.log("Wow! You won! " + playerSelection + " beats " + computerSelection);
+                        console.log("W3");
+                    }
+                    else {
+                        //console.log("Wow! You Lose! " + computerSelection + " beats " + playerSelection);
+                        console.log("L");
+                    }
+                
+                }*/
+              //  else {
+                //    playRound
+               }
+            function computerPlay() {
+                
+                let varSelect = Math.floor(Math.random()* select.length);
+                return select[varSelect];
+              //  alert(compSelect[varSelect]);
+}
+            
+            //console.log(computerSelection);
 /*
 Need a computer play function to return a value (Rock, Paper, or sissors)
             Needs to pick a random string from Rock, Paper, Sissors
