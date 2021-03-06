@@ -32,8 +32,8 @@
                 //select.map(a => a.toLowerCase());
                 for (let i = 0; i < select.length; i++)
                     {
-                        select[i].toLowerCase();
-                        return 1;
+                        select[i] = select[i].toLowerCase();
+                        console.log(select[i]);
                     }
                 if (playerSelection == select[0]) {
                     return 1;
