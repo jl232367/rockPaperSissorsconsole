@@ -18,21 +18,33 @@
         <![endif]-->
         
         <script src="" async defer>
-<<<<<<< HEAD
-// Need a computer play function to return a value (Rock, Paper, or sissors)
-
-=======
 
 // Need a computer play function to return a value (Rock, Paper, or sissors)
            
 
             
-            let playerSelection = "Rock";
+            let playerSelection;
             let select = ["Rock", "Paper", "Scissors"];
-            let computerSelection = computerPlay();
-            function playRound(playerSelection, computerSelection) {
+            let computerSelection;
+            function playRound() {
+                playerSelection = "Rock";
+                computerSelection = "paper";
+                select.map(a => a.toLowerCase());
+                if (playerSelection == select[0]) {
+                    return 1;
+                }else {
+                    return 0;
+                }
                 
-                console.log("Wow! You won! " + playerSelection + " beats " + computerSelection);
+               
+               }
+            function computerPlay() {
+                
+                let varSelect = Math.floor(Math.random()* select.length);
+                return select[varSelect];
+              //  alert(compSelect[varSelect]);
+}
+   // console.log("Wow! You won! " + playerSelection + " beats " + computerSelection);
                 /*computerSelection.toUpperCase();
                 playerSelection.toUpperCase();
                 select.map(a => a.toUpperCase());
@@ -56,17 +68,8 @@
                 
                 }*/
               //  else {
-                //    playRound
-               }
-            function computerPlay() {
-                
-                let varSelect = Math.floor(Math.random()* select.length);
-                return select[varSelect];
-              //  alert(compSelect[varSelect]);
-}
-            
+                //    playRound         
             //console.log(computerSelection);
->>>>>>> de573e33b1f432c529be59371971b895479a41af
 /*
 Need a computer play function to return a value (Rock, Paper, or sissors)
             Needs to pick a random string from Rock, Paper, Sissors
