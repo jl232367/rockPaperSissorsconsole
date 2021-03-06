@@ -29,7 +29,12 @@
             function playRound() {
                 playerSelection = "Rock";
                 computerSelection = "paper";
-                select.map(a => a.toLowerCase());
+                //select.map(a => a.toLowerCase());
+                for (let i = 0; i < select.length; i++)
+                    {
+                        select[i].toLowerCase();
+                        return 1;
+                    }
                 if (playerSelection == select[0]) {
                     return 1;
                 }else {
