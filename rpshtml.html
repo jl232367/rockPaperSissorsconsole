@@ -4,90 +4,96 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        
-        <script src="" async defer>
 
-// Need a computer play function to return a value (Rock, Paper, or sissors)
-           
+    <script src="" async defer>
+        // Need a computer play function to return a value (Rock, Paper, or sissors)
 
-            
-            let playerSelection;
-            let select = ["Rock", "Paper", "Scissors"];
-            let computerSelection;
-            function playRound() {
-                let compScore = 0;
-                let playerScore = 0;
-                
-                
-                for (let i = 0; i < select.length; i++)
-                    {
-                        select[i] = select[i].toLowerCase();
-                        //console.log(select[i]);
-                    }
-            
-                // select.map(a => a.toUpperCase());
-                while (compScore < 3 && playerScore < 3) {
-                    playSelection = prompt("Pick from Rock, Paper, or Scissors to play")
-                    computerSelection = computerPlay();
-                    computerSelection = computerSelection.toLowerCase();
-                    playerSelection = playerSelection.toLowerCase();
-                    if(playerSelection == select[0] || playerSelection == select[1] || playerSelection == select[2]) {
-                    if (playerSelection == select[0] && computerSelection == select[2]){
+
+
+        let playerSelection = "";
+        let select = ["Rock", "Paper", "Scissors"];
+        let computerSelection = "";
+
+        function playRound() {
+            let compScore = 0;
+            let playerScore = 0;
+
+
+            for (let i = 0; i < select.length; i++) {
+                select[i] = select[i].toUpperCase();
+                //console.log(select[i]);
+            }
+
+            // select.map(a => a.toUpperCase());
+            while (compScore < 3 && playerScore < 3) {
+                playerSelection = prompt("Pick from Rock, Paper, or Scissors to play");
+                computerSelection = computerPlay();
+                computerSelection = computerSelection.toUpperCase();
+                playerSelection = playerSelection.toUpperCase();
+                if (playerSelection == select[0] || playerSelection == select[1] || playerSelection == select[2]) {
+                    if (playerSelection == select[0] && computerSelection == select[2]) {
                         console.log("Wow! You won! " + playerSelection + " beats " + computerSelection);
                         playerScore++
                         //console.log("W1");
-                    }
-                    else if (playerSelection == select[1] && computerSelection == select[0]){
+                    } else if (playerSelection == select[1] && computerSelection == select[0]) {
                         console.log("Wow! You won! " + playerSelection + " beats " + computerSelection);
                         playerScore++
                         //console.log("W2");
-                    }
-                    else if (playerSelection == select[2] && computerSelection == select[1]){
+                    } else if (playerSelection == select[2] && computerSelection == select[1]) {
                         console.log("Wow! You won! " + playerSelection + " beats " + computerSelection);
                         playerScore++
                         //console.log("W3");
-                    }
-                    else if (playerSelection == computerSelection) {
+                    } else if (playerSelection == computerSelection) {
                         console.log("Wow! Tie! you both picked " + playerSelection + "!");
-                    }
-                    else {
+                    } else {
                         console.log("Wow! You Lose! " + computerSelection + " beats " + playerSelection);
                         compScore++
-                       //console.log("L");
+                        //console.log("L");
                     }
-                
-                }
+                } else {
+                    playerSelection = prompt("Try again please, pick from Rock, Paper, or Scissors to play");
+                    playerSelection = playerSelection.toUpperCase();
                 }
 
-                
-               // if (playerSelection == select[0]) {
-                 //   return 1;
-                //}else {
-                  //  return 0;
-                //}
-                
-               
-               }
-            function computerPlay() {
-                
-                let varSelect = Math.floor(Math.random()* select.length);
-                return select[varSelect];
-              //  alert(compSelect[varSelect]);
-}
-   // console.log("Wow! You won! " + playerSelection + " beats " + computerSelection);
-                /*computerSelection.toUpperCase();
+            }
+            if (playerScore == 3) {
+                alert("Wow! You won best 3 out of 5!")
+            } else {
+                alert("Wow! You lost 3 our of 5!")
+            }
+
+
+            // if (playerSelection == select[0]) {
+            //   return 1;
+            //}else {
+            //  return 0;
+            //}
+
+
+        }
+
+        function computerPlay() {
+
+            let varSelect = Math.floor(Math.random() * select.length);
+            return select[varSelect];
+            //  alert(compSelect[varSelect]);
+        }
+        // console.log("Wow! You won! " + playerSelection + " beats " + computerSelection);
+        /*computerSelection.toUpperCase();
                 playerSelection.toUpperCase();
                 select.map(a => a.toUpperCase());
                 if(playerSelection == select[0] || playerSelection == select[1] || playerSelection == select[2]) {
@@ -133,8 +139,7 @@ Function that will play multiple rounds of the playround function up to 5
             Needs to log how many rounds the computer and the player win
             
 */
+    </script>
+</body>
 
-
-        </script>
-    </body>
 </html>
