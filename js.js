@@ -21,7 +21,23 @@
 
      // select.map(a => a.toUpperCase());
      while (compScore < 3 && playerScore < 3) {
-         playerSelection = prompt("Pick from Rock, Paper, or Scissors to play");
+         for (let i =0; i < select.length; i++){
+             const game = document.querySelector('#game');
+             const playerOption = document.createElement("button");
+             playerOption.setAttribute('id', "ps" + i);
+             playerOption.setAttribute('class', "gamebut");
+             playerOption.textContent = select[i];
+             game.appendChild(playerOption);
+         }
+
+         const roundSelects = document.querySelectorAll(".gamebut")
+
+         roundSelects.forEach((gamebut) => {
+             gamebut.addEventListener('click', () => { 
+                playerSelection = gamebut.textContent;
+             });
+         });
+        // playerSelection = prompt("Pick from Rock, Paper, or Scissors to play");
          computerSelection = computerPlay();
          computerSelection = computerSelection.toUpperCase();
          playerSelection = playerSelection.toUpperCase();
@@ -46,8 +62,9 @@
                  //console.log("L");
              }
          } else {
-             playerSelection = prompt("Try again please, pick from Rock, Paper, or Scissors to play");
-             playerSelection = playerSelection.toUpperCase();
+             return;
+             //playerSelection = prompt("Try again please, pick from Rock, Paper, or Scissors to play");
+             //playerSelection = playerSelection.toUpperCase();
          }
 
      }
